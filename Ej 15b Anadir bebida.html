@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anadir bebida</title>
+</head>
+<body>
+    <div>
+        <ol id="bebidaList">Bebidas:
+            <li>Tea</li>
+            <li>Coffee</li>
+            <li>Milk</li>
+            <li>Agua</li>
+        </ol>
+        <p>Add your beverage:</p>
+        <input type="text" id="nombreBebida"><input type="button" value="Add" onclick="anadir()">
+        <!-- <p id="choice"></p> -->
+    </div>
+    <script>
+        function anadir(){
+            let nombre = document.getElementById("nombreBebida").value;
+            let nuevo = document.createElement("li");
+            nuevo.innerHTML = nombre;
+            document.getElementById("bebidaList").appendChild(nuevo);
+            console.log("nombre");
+        }
+    </script>    
+</body>
+<!-- 
+        // let bebidas = document.getElementsByTagName("li");
+        // function choose() {
+        //     let numero = Number(document.getElementById("numeroBebida").value);
+        //     if (numero<1 || numero>=bebidas.length) {
+        //         document.getElementById("choice").innerHTML = "Invalid choice";
+        //     } else {
+        //         document.getElementById("choice").innerHTML = bebidas[numero - 1].innerHTML;
+        //     }
+        // } -->
+</html>
