@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero de bebidas</title>
+</head>
+<body>
+    <div>
+        <ol>Bebidas:
+            <li>Tea</li>
+            <li>Coffee</li>
+            <li>Milk</li>
+            <li>Agua</li>
+        </ol>
+        <p>Choose your beverage:</p>
+        <input type="number" id="numeroBebida"><input type="button" value="Choose" onclick="choose()">
+        <p id="choice"></p>
+    </div>
+    <script>
+        let bebidas = document.getElementsByTagName("li");
+        function choose() {
+            let numero = Number(document.getElementById("numeroBebida").value);
+            if (numero<1 || numero>=bebidas.length) {
+                document.getElementById("choice").innerHTML = "Invalid choice";
+            } else {
+                document.getElementById("choice").innerHTML = bebidas[numero - 1].innerHTML;
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
