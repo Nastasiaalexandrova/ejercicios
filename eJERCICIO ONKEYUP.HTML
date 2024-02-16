@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onkeyup</title>
+    <style>
+        h1, h3, p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <h3>Escribe y veras</h3>
+    <p><input type="text" id="texto" onkeyup="escribe()"></p>
+    <script>
+        function escribe(){
+            document.getElementsByTagName("h1")[0].innerHTML = document.getElementById("texto").value;
+        }
+    </script>
+    
+</body>
+</html>
